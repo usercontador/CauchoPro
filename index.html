@@ -290,6 +290,66 @@
     .stickyCta .btn{width:100%}
     @media (max-width: 680px){ .stickyCta{display:flex} body{padding-bottom:78px} }
 
+
+    /* Menú móvil (hamburguesa) */
+    .menuBtn{
+      display:none;
+      width:44px;height:44px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+    }
+    .menuBtn span{
+      display:block;width:18px;height:2px;background:var(--text);
+      border-radius:999px;
+    }
+    .menuBtn span:nth-child(2){width:14px;opacity:.9}
+    .menuBtn span:nth-child(3){width:10px;opacity:.85}
+
+    .drawerBackdrop{
+      position:fixed;inset:0;background:rgba(0,0,0,.55);
+      display:none;z-index:200;
+    }
+    .drawer{
+      position:fixed;top:12px;right:12px;left:12px;
+      max-width:520px;margin-left:auto;
+      background:linear-gradient(180deg, rgba(17,27,49,.98), rgba(17,27,49,.88));
+      border:1px solid var(--line);
+      border-radius:22px;
+      box-shadow: var(--shadow);
+      padding:12px;
+      transform: translateY(-10px);
+      opacity:0;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+    .drawerTop{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 6px 10px}
+    .drawerTop b{font-size:13px}
+    .drawerLinks{display:grid;gap:10px;padding:6px}
+    .drawerLinks a{
+      display:flex;justify-content:space-between;align-items:center;gap:10px;
+      padding:12px 12px;border-radius:16px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      font-weight:800;
+    }
+    .drawerLinks a small{color:var(--muted);font-weight:700}
+    .drawerLinks a:hover{border-color:rgba(255,255,255,.22)}
+    .drawerActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:6px}
+    .drawerActions a{width:100%}
+    .drawerOpen .drawerBackdrop{display:block}
+    .drawerOpen .drawer{transform:translateY(0);opacity:1}
+
+    @media (max-width: 820px){
+      .navlinks{display:none}
+      .menuBtn{display:inline-flex}
+    }
+
 </style>
 </head>
 <body>
@@ -302,6 +362,8 @@
         <div style="font-size:12px;color:var(--muted);margin-top:2px;">Catálogo Productos | Edición 2025</div>
       </div>
     </div>
+
+    <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 
     <div class="navlinks">
       <a class="pill" href="#catalogo">Catálogo</a>
@@ -891,6 +953,31 @@ ${condiciones}`;
     navigator.serviceWorker.register('./sw.js?v=2').catch(()=>{});
   }
 </script>
+
+
+<!-- Menú móvil (drawer) -->
+<div class="drawerBackdrop" id="drawerBackdrop" aria-hidden="true">
+  <nav class="drawer" id="mobileMenu" aria-label="Menú">
+    <div class="drawerTop">
+      <b>Menú</b>
+      <button class="close" id="drawerClose" type="button">Cerrar</button>
+    </div>
+
+    <div class="drawerLinks">
+      <a href="#catalogo"><div>Catálogo<br><small>Ver por sector</small></div><div>›</div></a>
+      <a href="#galeria"><div>Imágenes<br><small>Páginas del PDF</small></div><div>›</div></a>
+      <a href="#servicios"><div>Cómo trabajamos<br><small>Proceso y materiales</small></div><div>›</div></a>
+      <a href="#faq"><div>FAQ<br><small>Preguntas frecuentes</small></div><div>›</div></a>
+      <a href="assets/downloads/catalogo-2025.pdf" target="_blank" rel="noreferrer"><div>Descargar PDF<br><small>Catálogo completo</small></div><div>↗</div></a>
+      <a href="#contacto"><div>Contacto<br><small>Cotización RFQ</small></div><div>›</div></a>
+    </div>
+
+    <div class="drawerActions">
+      <a class="btn" href="#contacto">Cotizar</a>
+      <a class="btn secondary" href="https://wa.me/56999981328" target="_blank" rel="noreferrer">WhatsApp</a>
+    </div>
+  </nav>
+</div>
 
 <!-- Barra fija (móvil) -->
 <div class="stickyCta" aria-label="Acciones rápidas">

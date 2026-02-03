@@ -8,7 +8,7 @@
 
 ## Editar contacto
 En `index.html` busca:
-- `https://api.whatsapp.com/send/?phone=56999981328&text&type=phone_number&app_absent=0`
+- `https://wa.me/56900000000`
 - `ventas@tudominio.cl`
 y reemplaza con tus datos.
 
