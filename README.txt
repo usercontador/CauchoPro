@@ -38,3 +38,7 @@ Ej: `assets/catalogo/catalogo-pagina-03.png`
 4) Te dará una URL pública (https://xxxx.netlify.app) que abre en iPhone/Android.
 
 Si usas tu propio hosting, sube TODOS los archivos y carpetas al directorio público (public_html).
+
+## Nota sobre GitHub Pages (uso comercial)
+GitHub indica que Pages no está pensado para alojar un negocio online como hosting gratuito.
+Para producción (clientes/ventas) usa Netlify/Vercel o tu hosting con dominio.

@@ -3,6 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Fabricación de piezas técnicas de caucho para minería, industria, transporte, aeronáutica y agro. Catálogo 2025, soluciones a medida y cotización rápida.">
+  <meta property="og:title" content="CauchoPro | Catálogo 2025">
+  <meta property="og:description" content="Piezas técnicas de caucho: abrasión, impacto, sellado y antivibración. Ver catálogo por sector y cotizar.">
+  <meta property="og:type" content="website">
+
   <title>CauchoPro | Catálogo 2025</title>
   <meta name="theme-color" content="#0b1220"/>
   <link rel="manifest" href="manifest.webmanifest">
@@ -247,6 +252,44 @@
       touch-action: pan-x pan-y;
     }
 
+
+    /* Secciones "nivel web pro" */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    @media (max-width: 820px){ .split{grid-template-columns:1fr} }
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    @media (max-width: 780px){ .steps{grid-template-columns:1fr} }
+    .step{border:1px solid var(--line);border-radius:18px;padding:14px;background:rgba(255,255,255,.03)}
+    .step b{display:block;margin-bottom:6px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .badge{border:1px solid var(--line);border-radius:999px;padding:10px 12px;background:rgba(255,255,255,.02);color:var(--muted);font-size:13px}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .faq{margin-top:14px;display:grid;gap:10px}
+    .faqItem{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03);overflow:hidden}
+    .faqQ{width:100%;text-align:left;background:transparent;border:0;color:var(--text);padding:14px 14px;cursor:pointer;font-weight:850;display:flex;justify-content:space-between;align-items:center}
+    .faqA{display:none;padding:0 14px 14px;color:var(--muted);line-height:1.6}
+    .faqQ span{color:var(--muted);font-weight:900}
+    .formGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width: 780px){ .formGrid{grid-template-columns:1fr} }
+    .field{display:flex;flex-direction:column;gap:8px}
+    .field label{font-size:13px;color:var(--muted);font-weight:700}
+    .field input,.field select,.field textarea{
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 12px;
+      color:var(--text);
+      outline:none;
+    }
+    .field textarea{min-height:110px;resize:vertical}
+    .note{color:var(--muted);font-size:13px;line-height:1.6}
+    .stickyCta{
+      position:fixed;left:12px;right:12px;bottom:12px;z-index:150;
+      display:none;gap:10px;
+    }
+    .stickyCta a{flex:1}
+    .stickyCta .btn{width:100%}
+    @media (max-width: 680px){ .stickyCta{display:flex} body{padding-bottom:78px} }
+
 </style>
 </head>
 <body>
@@ -263,6 +306,9 @@
     <div class="navlinks">
       <a class="pill" href="#catalogo">Catálogo</a>
       <a class="pill" href="#galeria">Imágenes</a>
+      <a class="pill" href="#servicios">Cómo trabajamos</a>
+      <a class="pill" href="#faq">FAQ</a>
+      <a class="pill" href="assets/downloads/catalogo-2025.pdf" target="_blank" rel="noreferrer">Descargar PDF</a>
       <a class="pill" href="#contacto">Contacto</a>
       <a class="btn" href="#contacto">Cotizar</a>
     </div>
@@ -280,6 +326,7 @@
         </p>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <a class="btn" href="#catalogo">Ver catálogo por sector</a>
+          <a class="btn secondary" href="assets/downloads/catalogo-2025.pdf" target="_blank" rel="noreferrer">Descargar catálogo (PDF)</a>
           <a class="btn secondary" href="#contacto">Hablar con ventas</a>
         </div>
 
@@ -306,6 +353,69 @@
       </div>
     </div>
   </section>
+
+
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="sectionTitle">
+        <h2>Cómo trabajamos</h2>
+        <div style="color:var(--muted);font-size:13.5px">Más claridad técnica = cotizaciones más rápidas y precisas</div>
+      </div>
+
+      <div class="split">
+        <div class="heroCard">
+          <h3 style="margin:0 0 10px">Capacidades y aplicaciones</h3>
+          <p class="sub" style="margin:0 0 10px">
+            Fabricamos piezas técnicas de caucho para condiciones exigentes: abrasión, impacto, vibración, sellado y protección.
+          </p>
+          <div class="badges">
+            <div class="badge">A medida (plano o muestra)</div>
+            <div class="badge">Goma-metal / antivibración</div>
+            <div class="badge">Revestimientos y protecciones</div>
+            <div class="badge">Sellos, juntas, empaques</div>
+            <div class="badge">Pisos antideslizantes</div>
+          </div>
+          <div class="ctaRow">
+            <a class="btn" href="#contacto">Cotizar ahora</a>
+            <a class="btn secondary" href="#catalogo">Ver productos</a>
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <h3 style="margin:0 0 10px">Materiales (según aplicación)</h3>
+          <p class="sub" style="margin:0 0 10px">
+            Selección de elastómeros según fluido, temperatura, abrasión y químicos.
+          </p>
+          <div class="badges">
+            <div class="badge">EPDM</div>
+            <div class="badge">Silicona</div>
+            <div class="badge">Viton (FKM)</div>
+            <div class="badge">NBR</div>
+            <div class="badge">Neopreno</div>
+          </div>
+          <p class="note" style="margin-top:12px">
+            Si no sabes el material, describe tu condición de trabajo (temperatura, químicos, abrasión, vibración) y te proponemos alternativas.
+          </p>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <b>1) Envío de datos</b>
+          <div class="note">Producto, medidas / plano o foto, cantidad y condiciones de trabajo.</div>
+        </div>
+        <div class="step">
+          <b>2) Revisión técnica</b>
+          <div class="note">Validamos material y diseño, proponemos alternativa si conviene.</div>
+        </div>
+        <div class="step">
+          <b>3) Cotización</b>
+          <div class="note">Te enviamos precio, plazo y condiciones. Ajustamos si hay iteraciones.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <section class="section" id="catalogo">
     <div class="container">
@@ -334,25 +444,67 @@
     </div>
   </section>
 
+  
   <section class="section" id="contacto">
     <div class="container">
+      <div class="sectionTitle">
+        <h2>Cotización (RFQ)</h2>
+        <div style="color:var(--muted);font-size:13.5px">Se envía por WhatsApp o correo (sin servidor)</div>
+      </div>
+
       <div class="heroCard">
-        <h2 style="margin:0 0 10px">Cotiza rápido</h2>
-        <p class="sub" style="margin-bottom:14px">
-          Envíanos: <b>producto</b>, <b>medidas</b>, <b>material</b> (si aplica), y <b>condiciones de trabajo</b> (temperatura, abrasión, químicos, vibración).
-        </p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <!-- Reemplaza con tu WhatsApp / correo -->
-          <a class="btn" href="https://wa.me/56900000000" target="_blank" rel="noreferrer">WhatsApp</a>
-          <a class="btn secondary" href="mailto:ventas@tudominio.cl?subject=Cotización%20CauchoPro%20-%20Catálogo%202025">Correo</a>
+        <div class="formGrid">
+          <div class="field">
+            <label>Producto / requerimiento</label>
+            <input id="rfqProducto" placeholder="Ej: O-rings / Rodillo engomado / Juntas..." />
+          </div>
+          <div class="field">
+            <label>Sector</label>
+            <select id="rfqSector">
+              <option>Minería</option>
+              <option>Industrial</option>
+              <option>Transporte</option>
+              <option>Aeronáutico</option>
+              <option>Agrícola y riego</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Cantidad</label>
+            <input id="rfqCantidad" placeholder="Ej: 10, 50, 100..." />
+          </div>
+          <div class="field">
+            <label>Material (si aplica)</label>
+            <input id="rfqMaterial" placeholder="Ej: EPDM / NBR / Viton / No lo sé" />
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Medidas / plano / referencia</label>
+            <textarea id="rfqMedidas" placeholder="Incluye medidas, tolerancias si aplican, o describe la pieza. Si tienes plano/foto, adjúntalo por WhatsApp o correo."></textarea>
+          </div>
+          <div class="field" style="grid-column:1/-1">
+            <label>Condiciones de trabajo</label>
+            <textarea id="rfqCondiciones" placeholder="Temperatura, abrasión, químicos/fluido, presión, vibración, ambiente (UV, agua salada, etc.)"></textarea>
+          </div>
         </div>
-        <div style="margin-top:14px;color:var(--muted);font-size:13.5px;line-height:1.6">
-          <b>Tip:</b> Si adjuntas foto o plano, te proponemos la alternativa más adecuada para tu proceso.
+
+        <div class="ctaRow" style="margin-top:14px">
+          <a class="btn" id="rfqWhatsApp" href="#" target="_blank" rel="noreferrer">Enviar por WhatsApp</a>
+          <a class="btn secondary" id="rfqEmail" href="#">Enviar por correo</a>
+          <a class="btn secondary" href="assets/downloads/catalogo-2025.pdf" target="_blank" rel="noreferrer">Descargar PDF</a>
+        </div>
+
+        <p class="note" style="margin-top:12px">
+          <b>Adjuntos (planos/fotos):</b> envíalos por WhatsApp o adjunta en tu correo antes de enviar.
+        </p>
+
+        <div style="margin-top:10px;color:var(--muted);font-size:13.5px;line-height:1.6">
+          Cambia el número de WhatsApp y correo en el código (WA_NUMBER y EMAIL_TO).
         </div>
       </div>
     </div>
   </section>
 </main>
+
 
 <footer>
   <div class="container">
@@ -675,10 +827,76 @@ Lugar de entrega:`;
   renderGrid();
   renderGallery();
 
+
+  // FAQ accordion
+  document.querySelectorAll('.faqQ').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faqItem');
+      const ans = item.querySelector('.faqA');
+      const open = ans.style.display === 'block';
+      document.querySelectorAll('.faqA').forEach(a => a.style.display = 'none');
+      document.querySelectorAll('.faqQ span').forEach(s => s.textContent = '+');
+      ans.style.display = open ? 'none' : 'block';
+      btn.querySelector('span').textContent = open ? '+' : '–';
+    });
+  });
+
+  // RFQ builder (WhatsApp + mailto)
+  const WA_NUMBER = "56977615816"; // <- cambia aquí
+  const EMAIL_TO = "ventas@tudominio.cl"; // <- cambia aquí
+
+  function buildRfqText(){
+    const producto = document.getElementById('rfqProducto')?.value || '';
+    const sector = document.getElementById('rfqSector')?.value || '';
+    const cantidad = document.getElementById('rfqCantidad')?.value || '';
+    const material = document.getElementById('rfqMaterial')?.value || '';
+    const medidas = document.getElementById('rfqMedidas')?.value || '';
+    const condiciones = document.getElementById('rfqCondiciones')?.value || '';
+    return `Hola, quiero cotizar:
+Producto: ${producto}
+Sector: ${sector}
+Cantidad: ${cantidad}
+Material: ${material}
+
+Medidas / referencia:
+${medidas}
+
+Condiciones de trabajo:
+${condiciones}`;
+  }
+
+  function refreshRfqLinks(){
+    const text = buildRfqText();
+    const wa = document.getElementById('rfqWhatsApp');
+    const em = document.getElementById('rfqEmail');
+    if(wa){
+      wa.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+    }
+    if(em){
+      const subject = `Cotización CauchoPro - ${document.getElementById('rfqProducto')?.value || 'RFQ'}`;
+      em.href = `mailto:${EMAIL_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+    }
+  }
+
+  ['rfqProducto','rfqSector','rfqCantidad','rfqMaterial','rfqMedidas','rfqCondiciones'].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el) el.addEventListener('input', refreshRfqLinks);
+    if(el) el.addEventListener('change', refreshRfqLinks);
+  });
+  refreshRfqLinks();
+
+
   // PWA (opcional): mejora apertura en móviles
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').catch(()=>{});
   }
 </script>
+
+<!-- Barra fija (móvil) -->
+<div class="stickyCta" aria-label="Acciones rápidas">
+  <a class="btn" href="#contacto">Cotizar</a>
+  <a class="btn secondary" href="https://wa.me/56977615816" target="_blank" rel="noreferrer">WhatsApp</a>
+</div>
+
 </body>
 </html>
