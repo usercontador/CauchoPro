@@ -350,6 +350,18 @@
       .menuBtn{display:inline-flex}
     }
 
+
+    /* Ajuste menú móvil: botón hamburguesa a la derecha */
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    @media (max-width: 820px){
+      .brand{margin-right:auto}
+      .menuBtn{margin-left:auto}
+    }
+
 </style>
 </head>
 <body>
@@ -362,7 +374,6 @@
         <div style="font-size:12px;color:var(--muted);margin-top:2px;">Catálogo Productos | Edición 2025</div>
       </div>
     </div>
-
     <button class="menuBtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
 
     <div class="navlinks">
