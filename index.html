@@ -342,8 +342,8 @@
     .drawerLinks a:hover{border-color:rgba(255,255,255,.22)}
     .drawerActions{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:6px}
     .drawerActions a{width:100%}
-    .drawerOpen .drawerBackdrop{display:block}
-    .drawerOpen .drawer{transform:translateY(0);opacity:1}
+    body.drawerOpen .drawerBackdrop, html.drawerOpen .drawerBackdrop{display:block}
+    body.drawerOpen .drawer, html.drawerOpen .drawer{transform:translateY(0);opacity:1}
 
     @media (max-width: 820px){
       .navlinks{display:none}
@@ -948,9 +948,46 @@ ${condiciones}`;
   refreshRfqLinks();
 
 
+  // Menú móvil (hamburguesa)
+  window.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menuBtn');
+    const drawerBackdrop = document.getElementById('drawerBackdrop');
+    const drawerClose = document.getElementById('drawerClose');
+
+    function openDrawer(){
+      document.body.classList.add('drawerOpen');
+      document.documentElement.classList.add('drawerOpen');
+      if(drawerBackdrop) drawerBackdrop.style.display = 'block';
+      menuBtn?.setAttribute('aria-expanded','true');
+      drawerBackdrop?.setAttribute('aria-hidden','false');
+    }
+    function closeDrawer(){
+      document.body.classList.remove('drawerOpen');
+      document.documentElement.classList.remove('drawerOpen');
+      if(drawerBackdrop) drawerBackdrop.style.display = 'none';
+      menuBtn?.setAttribute('aria-expanded','false');
+      drawerBackdrop?.setAttribute('aria-hidden','true');
+    }
+
+    menuBtn?.addEventListener('click', openDrawer);
+    drawerClose?.addEventListener('click', closeDrawer);
+    drawerBackdrop?.addEventListener('click', (e) => { if(e.target === drawerBackdrop) closeDrawer(); });
+
+    // Cierra el menú al hacer click en un link
+    document.querySelectorAll('#mobileMenu a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', closeDrawer);
+    });
+
+    // Escape cierra el menú
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape') closeDrawer();
+    });
+  });
+
+
   // PWA (opcional): mejora apertura en móviles
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js?v=2').catch(()=>{});
+    navigator.serviceWorker.register('./sw.js?v=3').catch(()=>{});
   }
 </script>
 

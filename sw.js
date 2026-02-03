@@ -1,4 +1,4 @@
-const CACHE = "cauchopro-v2";
+const CACHE = "cauchopro-v3";
 const CORE = [
   "./",
   "./index.html",
