@@ -8,7 +8,7 @@
 
 ## Editar contacto
 En `index.html` busca:
-- `https://wa.me/56999981328`
+- `https://wa.me/56900000000`
 - `ventas@tudominio.cl`
 y reemplaza con tus datos.
 

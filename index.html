@@ -456,7 +456,7 @@
         <div class="formGrid">
           <div class="field">
             <label>Producto / requerimiento</label>
-            <input id="rfqProducto" placeholder="Ej: O-rings / Rodillo engomado / Juntas..." />
+            <input id="rfqProducto" placeholder="Ej: O-rings / Rodillo engomado / Juntas..." value="Solicitud de cotización desde la web CauchoPro" />
           </div>
           <div class="field">
             <label>Sector</label>
@@ -489,7 +489,7 @@
 
         <div class="ctaRow" style="margin-top:14px">
           <a class="btn" id="rfqWhatsApp" href="#" target="_blank" rel="noreferrer">Enviar por WhatsApp</a>
-          <a class="btn secondary" id="rfqEmail" href="#">Enviar por correo</a>
+          <a class="btn secondary" id="rfqEmail" href="mailto:ventas@cauchopro.cl">Enviar por correo</a>
           <a class="btn secondary" href="assets/downloads/catalogo-2025.pdf" target="_blank" rel="noreferrer">Descargar PDF</a>
         </div>
 
@@ -843,7 +843,7 @@ Lugar de entrega:`;
 
   // RFQ builder (WhatsApp + mailto)
   const WA_NUMBER = "56999981328"; // <- cambia aquí
-  const EMAIL_TO = "ventas@tudominio.cl"; // <- cambia aquí
+  const EMAIL_TO = "ventas@cauchopro.cl"; // <- cambia aquí
 
   function buildRfqText(){
     const producto = document.getElementById('rfqProducto')?.value || '';
