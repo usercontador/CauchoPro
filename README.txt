@@ -1,4 +1,4 @@
-# CauchoPro - Catálogo 2025 (sitio estático)
+# CauchoPro - Catálogo 2026 (sitio estático)
 
 ## Cómo abrir
 - Doble clic en `index.html` (abre en tu navegador)
